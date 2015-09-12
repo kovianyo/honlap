@@ -6,8 +6,8 @@
   <title>Template 9</title>
   <style type="text/css">
   /* Client-specific Styles */
-  #outlook a {  padding:0; } /* Force Outlook to provide a "view in browser" menu link. */
-  body{  width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;
+  #outlook a { padding:0; } /* Force Outlook to provide a "view in browser" menu link. */
+  body{ width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;
 
   }
   /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
@@ -17,7 +17,7 @@
     src: url(http://cserkesz.hu/l/egyszazalek-kepgenerator/MCSSZSQHUNLight.ttf);
   }
 
-  .ExternalClass {  width:100%;} /* Force Hotmail to display emails at full width */
+  .ExternalClass { width:100%;} /* Force Hotmail to display emails at full width */
   .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%;} /* Force Hotmail to display normal line spacing.  */
   #backgroundTable { margin:0; padding:0; width:100% !important; line-height: 100% !important;}
   img { outline:none; text-decoration:none;border:none; -ms-interpolation-mode: bicubic;}
@@ -25,10 +25,10 @@
   .image_fix { display:block;}
   p { margin: 0px 0px !important;}
   table td { border-collapse: collapse;}
-  table {  border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+  table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
   a { color: #9ec459;text-decoration: none;text-decoration:none!important;}
   /*STYLES*/
-  table[class=full] {  width: 100%; clear: both; }
+  table[class=full] { width: 100%; clear: both; }
 
 
   @media only screen and (min-width: 640px) {
@@ -109,11 +109,6 @@
   </style>
 </head>
 <body>
-  <!-- Start of preheader -->
-
-  <!-- End of preheader -->
-
-
   <!-- Start of LOGO -->
   <table width="100%" bgcolor="#e8eaed" cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
     <tbody>
@@ -402,10 +397,6 @@ TARTALOMJEGYZÉK
                         <a href="http://cserkesz.hu/elnokseg" style="text-decoration: none; color: #9ec459">cserkesz.hu/elnokseg</a> <br>
                         <a href="mailto:oe-hirlevel-l-request@cserkesz.hu?subject=subscribe" style="text-decoration: none; color: #9ec459">Feliratkozás a hírlevélre</a>   <br>
                         <a href=" http://cserkesz.hu/szovetseg/testuletek/orszagos-elnokseg/hirlevel" style="text-decoration: none; color: #9ec459">Hírlevél archívum</a>
-
-
-
-
                       </td>
                     </tr>
                     <!-- Spacing -->
