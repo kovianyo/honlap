@@ -899,76 +899,6 @@ ORDER BY kategoria_id, hir_id";
    
     $smarty->assign('hirlevelTitle', $hirlevelTitle);
 
-/*    
-    $hir1 = array("hir_id" => "1", "hir_cim" => "hir_cim1", "hir_szoveg" => "hir_szoveg1", "hir_imageTag" => "hir_imageTag1");
-    $hir2 = array("hir_id" => "2", "hir_cim" => "hir_cim2", "hir_szoveg" => "hir_szoveg2", "hir_imageTag" => "hir_imageTag2");
-    
-    $kat1 = array("kategoria_szoveg" => "kategoria_szoveg1", "hirek" => array($hir1, $hir2));
-    $kat2 = array("kategoria_szoveg" => "kategoria_szoveg2");
-    $kategoriak1 = array($kat1, $kat2);
-*/
-    $smarty->assign('kategoriak1', $kategoriak1);
-    
-    
-      
-      $half = count($kategoriak) / 2;
-      $i = 0;
-      $kat1 = array();
-      $kat2 = array();
-      foreach ($kategoriak as $key => $value)
-      {
-         if ($i < $half)
-         {
-           array_push($kat1, $value);
-         }
-         else
-         {
-           array_push($kat2, $value);
-         }
-         $i++;
-      }
-
-
-      $kategoriak1 = array();
-
-      foreach ($kat1 as $value)
-      {
-        $kat = array("kategoria_szoveg" => $value["kategoria_szoveg"], "hirek" => array());
-          
-        $hirek = $this->QsToArray("SELECT * FROM hir_hir WHERE hir_kat_id=" . $value["kategoria_id"] . " AND hir_hirlev_id=" . $hirlevel["hirlevel_id"] . " ORDER BY hir_id");
-
-
-        foreach ($hirek as $key => $value)
-        {
-          $imageTag = $this->GetImageTag($value["hir_tipus"], 2);
-          array_push($kat["hirek"], array("hir_id" => $value["hir_id"], "hir_cim" => $value["hir_cim"], "hir_szoveg" => $value["hir_szoveg"], "hir_imageTag" => $imageTag));
-        }
-        
-        array_push($kategoriak1, $kat);
-      }
-                                                            
-
-      $kategoriak2 = array();
-
-      foreach ($kat2 as $value)
-      {
-        $kat = array("kategoria_szoveg" => $value["kategoria_szoveg"], "hirek" => array());
-          
-        $hirek = $this->QsToArray("SELECT * FROM hir_hir WHERE hir_kat_id=" . $value["kategoria_id"] . " AND hir_hirlev_id=" . $hirlevel["hirlevel_id"] . " ORDER BY hir_id");
-
-
-        foreach ($hirek as $key => $value)
-        {
-          $imageTag = $this->GetImageTag($value["hir_tipus"], 2);
-          array_push($kat["hirek"], array("hir_id" => $value["hir_id"], "hir_cim" => $value["hir_cim"], "hir_szoveg" => $value["hir_szoveg"], "hir_imageTag" => $imageTag));
-        }
-        
-        array_push($kategoriak2, $kat);
-      }
-                                                            
-
-      
-  
     $kategoriakAll = array();
 
     foreach ($kategoriak as $key => $value)
@@ -985,9 +915,7 @@ ORDER BY kategoria_id, hir_id";
       array_push($kategoriakAll, $kat);
     }
 
-    $smarty->assign('kategoriak1', $kategoriak1);
-    $smarty->assign('kategoriak2', $kategoriak2);
-    $smarty->assign('kategoriakAll', $kategoriakAll);
+    $smarty->assign('kategoriak', $kategoriakAll);
 
     $result = $smarty->fetch('hirlevel.tpl');
 

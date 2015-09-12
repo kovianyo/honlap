@@ -196,11 +196,13 @@
                                                       <tr>
                                                          <td style="font-family: Helvetica, arial, sans-serif; font-size: 13px; font-weight:bold; color: #333333; text-align:left;line-height: 24px;">
                                                          <a name="top"></a>
-{foreach $kategoriak1 as $kategoria}
-    <h3>{$kategoria.kategoria_szoveg}</h3>
-    {foreach $kategoria.hirek as $hir}
-        <a href='#hir_{$hir.hir_id}' style='color:#333333;'>{$hir.hir_cim}</a> {$hir.hir_imageTag}<br>
-    {/foreach}
+{foreach $kategoriak as $kategoria}
+  {if $kategoria@index < $kategoria@total / 2 }
+      <h3>{$kategoria.kategoria_szoveg}</h3>
+      {foreach $kategoria.hirek as $hir}
+          <a href='#hir_{$hir.hir_id}' style='color:#333333;'>{$hir.hir_cim}</a> {$hir.hir_imageTag}<br>
+      {/foreach}
+  {/if}
 {/foreach}
 
      </td>
@@ -240,11 +242,13 @@
                                                          <td style="font-family: Helvetica, arial, sans-serif; font-size: 13px; font-weight:bold; color: #333333; text-align:left;line-height: 24px;">
                                                          <a name="top"></a>
 
-{foreach $kategoriak2 as $kategoria}
+{foreach $kategoriak as $kategoria}
+  {if $kategoria@index >= $kategoria@total / 2 }
     <h3>{$kategoria.kategoria_szoveg}</h3>
     {foreach $kategoria.hirek as $hir}
         <a href='#hir_{$hir.hir_id}' style='color:#333333;'>{$hir.hir_cim}</a> {$hir.hir_imageTag}<br>
     {/foreach}
+  {/if}
 {/foreach}
 
      </td>
@@ -303,7 +307,7 @@
                                        <!-- 1. hír blokk START-->
 <!-- ----------------------------------------------------------------------------->
 
-{foreach $kategoriakAll as $kategoria}
+{foreach $kategoriak as $kategoria}
 <!-- Title -->
                                           <tr>
                                              <td style="font-family: Helvetica, arial, sans-serif; font-size: 1.0em; font-weight:bold; color: #ffffff; text-align:left;line-height: 24px; padding: 10px;" bgcolor="#76B82A">
